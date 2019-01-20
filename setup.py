@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="tk_rest",
-    version="0.0.1",
+    name="tk_garden",
+    version="0.0.2",
     author="TechKids Coding School",
     author_email="techkidsvn@gmail.com",
     description="TK Garden Bot Controllers",
