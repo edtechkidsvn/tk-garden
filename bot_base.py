@@ -23,12 +23,15 @@ class GardenBotBase():
         self.current_turn = 0
 
     def preset(self, game_rule, game_state):
+        state = game_state["allies"][self.role]
         map_state = game_state["map"]
         self.game_rule = game_rule
         self.map_width = len(map_state)
         self.map_height = len(map_state[0])
         self.my_team = game_state["myTeam"]
-    
+        self.chest_x = state["x"]
+        self.chest_y = state["y"]
+
     def update_state(self, game_rule, game_state):
         allies = game_state["allies"]
         self.state = allies[self.role]
@@ -41,10 +44,10 @@ class GardenBotBase():
         self.enemies = game_state["enemies"]
         self.allies = list(filter(lambda a: a != self.state, allies))
         self.current_turn = game_state["turn"]
-    
+
     def start(self, game_rule, game_state):
         self.preset(game_rule, game_state)
-        self.do_start() 
+        self.do_start()
 
     def do_start(self):
         pass

@@ -8,5 +8,4 @@ class GardenBot(GardenBotBase):
         self.role = self.roles["PLANTER"]
 
     def do_turn(self):
-        print(self.x, self.y)
-        return self.directions["DOWN"]
+        return self.directions["STAY"]

@@ -14,4 +14,4 @@ class GardenBot(GardenBotBase):
         return
 
     def do_turn(self):
-        return self.directions["DOWN"]
+        return self.directions["STAY"]

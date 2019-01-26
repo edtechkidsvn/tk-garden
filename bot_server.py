@@ -11,7 +11,7 @@ from team2.harvester.main import GardenBot as harvester2
 from team2.planter.main import GardenBot as planter2
 from team2.worm.main import GardenBot as worm2
 
-coin_flip = random.randint(0, 1) == 1
+coin_flip = random.randint(0, 1) < 2
 
 if(coin_flip):
     bots = [
